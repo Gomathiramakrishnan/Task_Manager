@@ -23,6 +23,10 @@ app.use(
     credentials: true,
   })
 );
+app.get("/", (req, res) => {
+  res.status(200).send("API is live!");
+});
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
