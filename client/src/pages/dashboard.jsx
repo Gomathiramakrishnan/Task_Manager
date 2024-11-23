@@ -158,7 +158,7 @@ const Dashboard = () => {
      </div>
     );
      
-  const totals = data?.tasks;
+  const totals = data?.tasks || {};
 
   const stats = [
     {
@@ -187,7 +187,7 @@ const Dashboard = () => {
       label: "TODOS",
       total: totals["todo"],
       icon: <FaArrowsToDot />,
-      bg: "bg-[#be185d]" || 0,
+      bg: data?.bgColor || "bg-[#be185d]",
     },
   ];
 
