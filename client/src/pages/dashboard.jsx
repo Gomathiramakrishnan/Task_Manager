@@ -157,8 +157,8 @@ const Dashboard = () => {
         <Loading/> 
      </div>
     );
-
-  const totals = data?.tasks;
+     
+  const totals = data?.tasks || {};
 
   const stats = [
     {
