@@ -157,6 +157,16 @@ const Dashboard = () => {
         <Loading/> 
      </div>
     );
+
+  
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <div className="py-10 text-center text-gray-600">
+          No data available
+      </div>
+    );
+  }
+
      
   const totals = data?.tasks || {};
 
@@ -185,9 +195,9 @@ const Dashboard = () => {
     {
       _id: "4",
       label: "TODOS",
-      total: totals["todo"],
+      total: totals["todo"] || 0,
       icon: <FaArrowsToDot />,
-      bg: data?.bgColor || "bg-[#be185d]",
+      bg: "bg-[#be185d]",
     },
   ];
 
