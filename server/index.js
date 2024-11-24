@@ -18,7 +18,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://task-manager-1-adcp.onrender.com/log-in"],
+    origin: ["http://localhost:3000", "http://localhost:3001","https://task-manager-1-adcp.onrender.com"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
