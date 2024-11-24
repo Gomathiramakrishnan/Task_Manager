@@ -158,17 +158,8 @@ const Dashboard = () => {
      </div>
     );
 
-  
-  if (!data || Object.keys(data).length === 0) {
-    return (
-      <div className="py-10 text-center text-gray-600">
-          No data available
-      </div>
-    );
-  }
-
      
-  const totals = data?.tasks || {};
+  const totals = data?.tasks;
 
   const stats = [
     {
@@ -195,9 +186,9 @@ const Dashboard = () => {
     {
       _id: "4",
       label: "TODOS",
-      total: totals["todo"] || 0,
+      total: totals["todo"],
       icon: <FaArrowsToDot />,
-      bg: "bg-[#be185d]",
+      bg: "bg-[#be185d]" || 0,
     },
   ];
 
